@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="gradB" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2B7DF5"/>
+      <stop offset="1" stop-color="#0B4EA2"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g transform="translate(160,200)">
+    <text x="0" y="36" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="160" text-anchor="middle" fill="url(#gradB)">S</text>
+  </g>
+  <text x="420" y="230" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="128" fill="#0A2340">Starkernal</text>
+</svg>
