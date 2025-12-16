@@ -1,0 +1,42 @@
+
+说明（modern-gradient）
+- 风格：极简几何 + 垂直渐变（从亮蓝到深海蓝），S 采用 “刀锋” 切角，读感强、现代感强。
+- 适用场景：网站头图、产品 logo、favicon（需导出 16/32/48）。
+- 优化点：去掉强外发光，增加轻微投影，保证小尺寸时仍识别度高。
+
+``svg name=starkernal-neon-orbit.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <defs>
+    <radialGradient id="neon" cx="50%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#7AF0FF"/>
+      <stop offset="0.4" stop-color="#0078FF"/>
+      <stop offset="1" stop-color="#001033"/>
+    </radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="transparent"/>
+  <!-- 透明圆底留白，外部环与发光 -->
+  <circle cx="600" cy="410" r="310" fill="#07112A" opacity="0.0"/>
+
+  <!-- 环：切割的轨道，制造动感 -->
+  <g transform="translate(0,0)">
+    <ellipse cx="600" cy="420" rx="420" ry="170" fill="none" stroke="url(#neon)" stroke-width="8" stroke-opacity="0.85" transform="rotate(-18 600 420)" filter="url(#glow)"/>
+    <ellipse cx="600" cy="420" rx="320" ry="120" fill="none" stroke="#0BC0FF" stroke-width="4" stroke-opacity="0.6" transform="rotate(22 600 420)" />
+  </g>
+
+  <!-- S：深色主体 + 内部高光带形成立体感 -->
+  <g transform="translate(0,0)">
+    <path d="M350,340 L850,340 C880,340 915,342 915,400 C915,458 880,460 850,460 L700,460 C700,460 675,460 660,475 C645,490 645,515 660,530 C675,545 700,545 700,545 L850,545 C880,545 915,547 915,605 C915,663 880,665 850,665 L350,665 C320,665 285,663 285,605 C285,547 320,545 350,545 L500,545 C500,545 525,545 540,530 C555,515 555,490 540,475 C525,460 500,460 500,460 L350,460 C320,460 285,458 285,400 C285,342 320,340 350,340 Z"
+          fill="#001D3A" transform="translate(0,0) scale(0.8) translate(120,126)"/>
+    <!-- 内部高光 -->
+    <path d="M365,385 L835,385 C840,385 860,387 860,410 C860,433 840,435 835,435 L590,435 C590,435 575,435 567,443 C559,451 559,462 567,470 C575,478 590,478 590,478 L835,478 C840,478 860,480 860,503 C860,526 840,528 835,528 L365,528 C360,528 340,526 340,503 C340,480 360,478 365,478 L610,478 C610,478 625,478 633,470 C641,462 641,451 633,443 C625,435 610,435 610,435 L365,435 C360,435 340,433 340,410 C340,387 360,385 365,385 Z"
+          fill="url(#neon)" opacity="0.9" transform="translate(0,0) scale(0.8) translate(120,126)"/>
+  </g>
+
+  <!-- 字标（发光边） -->
+  <text x="600" y="980" text-anchor="middle" font-family="Poppins, Montserrat, Arial, sans-serif" font-weight="700" font-size="120" fill="#001A35" style="filter: drop-shadow(0 6px 18px rgba(0,120,255,0.25));">Starkernal</text>
+</svg>
