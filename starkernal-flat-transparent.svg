@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="gradA" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2B7DF5"/>
+      <stop offset="1" stop-color="#0B4EA2"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="transparent"/>
+  <text x="400" y="360" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="360" text-anchor="middle" fill="url(#gradA)">S</text>
+  <text x="400" y="640" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="92" text-anchor="middle" fill="#0A2340">Starkernal</text>
+</svg>
